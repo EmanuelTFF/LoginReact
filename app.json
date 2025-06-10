@@ -15,7 +15,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "br.com.loginapp",
+      "googleService": "./google-service.json"
     },
     "web": {
       "bundler": "metro",
@@ -32,10 +34,22 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
       ]
-    ],
-    "experiments": {
-      "typedRoutes": true
-    }
+    ]
+  },
+  "dependencies": {
+    "@react-native-firebase/app": "^18.0.0",
+    "@react-native-firebase/auth": "^18.0.0"
+  },
+  "experiments": {
+    "typedRoutes": true
   }
 }
